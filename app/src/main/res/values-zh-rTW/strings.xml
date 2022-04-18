@@ -26,6 +26,7 @@
     <string name="maybe_later">稍後再說</string>
     <string name="merge">合併</string>
     <string name="none">無</string>
+    <string name="open_navigation_drawer">開啟導覽匣</string>
     <string name="paste">貼上</string>
     <string name="refresh">更新</string>
     <string name="reload">重新載入</string>
@@ -210,9 +211,15 @@
     <string name="file_name_error_already_exists">已存在同名的檔案</string>
     <string name="file_delete_message_file_format">刪除「%1$s」？</string>
     <string name="file_delete_message_directory_format">刪除資料夾「%1$s」和它的內容？</string>
-    <string name="file_delete_message_multiple_files_format">刪除 %1$,d 個檔案？</string>
-    <string name="file_delete_message_multiple_directories_format">刪除 %1$,d 個資料夾和它們的內容？</string>
-    <string name="file_delete_message_multiple_mixed_format">刪除 %1$,d 個檔案和資料夾？</string>
+    <plurals name="file_delete_message_multiple_files_format">
+        <item quantity="other">刪除 %1$,d 個檔案？</item>
+    </plurals>
+    <plurals name="file_delete_message_multiple_directories_format">
+        <item quantity="other">刪除 %1$,d 個資料夾和它們的內容？</item>
+    </plurals>
+    <plurals name="file_delete_message_multiple_mixed_format">
+        <item quantity="other">刪除 %1$,d 個檔案和資料夾？</item>
+    </plurals>
     <string name="file_create_archive_title">建立壓縮檔案</string>
     <string name="file_create_archive_type_zip">.zip</string>
     <string name="file_create_archive_type_tar_xz">.tar.xz</string>
@@ -438,6 +445,9 @@
     <string name="storage_edit_sftp_server_private_key_open_file">開啟檔案</string>
     <string name="storage_edit_sftp_server_private_key_error_empty">輸入私密金鑰</string>
     <string name="storage_edit_sftp_server_private_key_error_invalid">無效的私密金鑰</string>
+    <string name="storage_edit_sftp_server_private_key_password">私密金鑰密碼</string>
+    <string name="storage_edit_sftp_server_private_key_password_placeholder">可留空</string>
+    <string name="storage_edit_sftp_server_private_key_password_error_invalid">無效的私密金鑰密碼</string>
     <string name="storage_edit_sftp_server_connect_and_add">連線並新增</string>
     <string name="storage_edit_sftp_server_add">新增</string>
     <string name="storage_add_lan_smb_server_loading">正在搜尋 SMB 伺服器…</string>

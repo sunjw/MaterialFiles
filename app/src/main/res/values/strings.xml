@@ -26,6 +26,7 @@
     <string name="maybe_later">Maybe later</string>
     <string name="merge">Merge</string>
     <string name="none">None</string>
+    <string name="open_navigation_drawer">Open navigation drawer</string>
     <string name="paste">Paste</string>
     <string name="pick" translatable="false">@string/select</string>
     <string name="refresh">Refresh</string>
@@ -234,9 +235,18 @@
     <string name="file_name_error_already_exists">A file with this name already exists</string>
     <string name="file_delete_message_file_format">Delete “%1$s”?</string>
     <string name="file_delete_message_directory_format">Delete folder “%1$s” and its contents?</string>
-    <string name="file_delete_message_multiple_files_format">Delete %1$,d files?</string>
-    <string name="file_delete_message_multiple_directories_format">Delete %1$,d folders and their contents?</string>
-    <string name="file_delete_message_multiple_mixed_format">Delete %1$,d items?</string>
+    <plurals name="file_delete_message_multiple_files_format">
+        <item quantity="one">Delete %1$,d file?</item>
+        <item quantity="other">Delete %1$,d files?</item>
+    </plurals>
+    <plurals name="file_delete_message_multiple_directories_format">
+        <item quantity="one">Delete %1$,d folder and its content?</item>
+        <item quantity="other">Delete %1$,d folders and their contents?</item>
+    </plurals>
+    <plurals name="file_delete_message_multiple_mixed_format">
+        <item quantity="one">Delete %1$,d item?</item>
+        <item quantity="other">Delete %1$,d items?</item>
+    </plurals>
     <string name="file_create_archive_title">Create archive</string>
     <string name="file_create_archive_type_zip">.zip</string>
     <string name="file_create_archive_type_tar_xz">.tar.xz</string>
@@ -559,6 +569,9 @@
     <string name="storage_edit_sftp_server_private_key_open_file">Open file</string>
     <string name="storage_edit_sftp_server_private_key_error_empty">Enter a private key</string>
     <string name="storage_edit_sftp_server_private_key_error_invalid">Invalid private key</string>
+    <string name="storage_edit_sftp_server_private_key_password">Private key password</string>
+    <string name="storage_edit_sftp_server_private_key_password_placeholder">Can be left empty</string>
+    <string name="storage_edit_sftp_server_private_key_password_error_invalid">Invalid private key password</string>
     <string name="storage_edit_sftp_server_connect_and_add">Connect and add</string>
     <string name="storage_edit_sftp_server_add">Add</string>
     <string name="storage_add_lan_smb_server_title" translatable="false">@string/storage_edit_smb_server_title_add</string>
