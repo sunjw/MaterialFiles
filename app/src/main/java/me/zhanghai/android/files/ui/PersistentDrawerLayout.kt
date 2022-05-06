@@ -17,12 +17,13 @@ import androidx.core.content.res.use
 import androidx.core.view.children
 import androidx.core.view.isInvisible
 import androidx.customview.widget.ViewDragHelper
-import me.zhanghai.android.files.util.dpToDimension
 import me.zhanghai.android.files.util.layoutInStatusBar
 
 class PersistentDrawerLayout @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null,
-    @AttrRes defStyleAttr: Int = 0, @StyleRes defStyleRes: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    @AttrRes defStyleAttr: Int = 0,
+    @StyleRes defStyleRes: Int = 0
 ) : ViewGroup(context, attrs, defStyleAttr, defStyleRes) {
     private val leftDragger = ViewDragHelper.create(this, ViewDragCallback(Gravity.LEFT))
     private val rightDragger = ViewDragHelper.create(this, ViewDragCallback(Gravity.RIGHT))
