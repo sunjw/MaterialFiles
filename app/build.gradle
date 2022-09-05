@@ -20,8 +20,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.google.gms:google-services:4.3.10'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.0'
+        classpath 'com.google.gms:google-services:4.3.13'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
     }
 }
 apply plugin: 'com.google.gms.google-services'
@@ -30,12 +30,14 @@ apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     namespace 'me.zhanghai.android.files'
-    compileSdkVersion 32
-    ndkVersion '24.0.8215888'
-    buildToolsVersion '32.0.0'
+    compileSdkVersion 33
+    ndkVersion '25.1.8937393'
+    buildToolsVersion '33.0.0'
     defaultConfig {
         applicationId 'me.zhanghai.android.files'
         minSdkVersion 21
+        // Not supporting notification runtime permission yet.
+        //noinspection OldTargetApi
         targetSdkVersion 32
         versionCode 31
         versionName '1.5.2'
@@ -169,7 +171,7 @@ dependencies {
     implementation "io.coil-kt:coil-gif:$coil_version"
     implementation "io.coil-kt:coil-svg:$coil_version"
     implementation "io.coil-kt:coil-video:$coil_version"
-    implementation 'me.zhanghai.android.appiconloader:appiconloader:1.4.0'
+    implementation 'me.zhanghai.android.appiconloader:appiconloader:1.5.0'
     implementation 'me.zhanghai.android.fastscroll:library:1.1.8'
     implementation 'me.zhanghai.android.foregroundcompat:library:1.0.2'
     implementation 'me.zhanghai.android.libselinux:library:2.1.0'
@@ -198,7 +200,7 @@ dependencies {
 
 //#ifdef NONFREE
     implementation 'com.github.junrar:junrar:7.4.1'
-    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation platform('com.google.firebase:firebase-bom:30.4.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics-ndk'
 //#endif
