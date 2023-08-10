@@ -30,8 +30,9 @@
         <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialFiles.CardView</item>
         <item name="navigationViewStyle">@style/Widget.MaterialFiles.NavigationView</item>
-        <item name="minTouchTargetSize">0dp</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.MaterialFiles.SwitchPreferenceCompat</item>
         <item name="textInputStyle">?textInputOutlinedStyle</item>
+        <item name="minTouchTargetSize">0dp</item>
 
         <item name="colorAppBarSurface">?colorSurface</item>
     </style>
@@ -78,8 +79,10 @@
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MaterialFiles.MediumComponent</item>
         <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialFiles.CardView</item>
-        <item name="minTouchTargetSize">0dp</item>
+        <item name="navigationViewStyle">@style/Widget.MaterialFiles.NavigationView</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.MaterialFiles.SwitchPreferenceCompat</item>
         <item name="textInputStyle">?textInputOutlinedStyle</item>
+        <item name="minTouchTargetSize">0dp</item>
 
         <item name="colorAppBarSurface">@color/dark_50_percent</item>
     </style>

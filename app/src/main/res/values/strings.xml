@@ -44,6 +44,7 @@
     <string name="show">Show</string>
     <string name="skip">Skip</string>
     <string name="stop">Stop</string>
+    <string name="system_default">System default</string>
     <string name="unknown">Unknown</string>
     <string name="view">View</string>
 
@@ -649,9 +650,13 @@
     <string name="ftp_server_state_summary_stopping">Stopping…</string>
     <string name="ftp_server_state_summary_stopped">Not started</string>
     <string name="ftp_server_url_title">URL</string>
-    <string name="ftp_server_url_summary_no_local_inet_address">Cannot retrieve local IP address</string>
+    <string name="ftp_server_url_summary_no_local_inet_address">Local IP address is unknown</string>
     <string name="ftp_server_url_menu_copy_url">Copy URL</string>
     <string name="ftp_server_url_menu_copy_password">Copy password</string>
+    <string name="ftp_server_add_tile_title">Add to Quick Settings</string>
+    <string name="ftp_server_add_tile_result_added">\"FTP server\" has been added to Quick Settings</string>
+    <string name="ftp_server_add_tile_result_already_added">\"FTP server\" is already added to Quick Settings</string>
+    <string name="ftp_server_add_tile_result_error">Error while adding \"FTP server\" to Quick Settings</string>
     <string name="ftp_server_configuration_title">Configuration</string>
     <string name="ftp_server_anonymous_login_title">Anonymous login</string>
     <string name="ftp_server_username_title">Username</string>
@@ -660,10 +665,11 @@
     <string name="ftp_server_home_directory_title">Root folder</string>
     <string name="ftp_server_writable_title">Allow writing</string>
     <string name="ftp_server_notification_title" translatable="false">@string/ftp_server_title</string>
-    <string name="ftp_server_notification_text">FTP server is running</string>
+    <string name="ftp_server_notification_text_no_local_inet_address" translatable="false">@string/ftp_server_url_summary_no_local_inet_address</string>
 
     <string name="settings_title">Settings</string>
     <string name="settings_interface_title">Interface</string>
+    <string name="settings_locale_title">Language</string>
     <string name="settings_theme_color_title">Theme color</string>
     <string name="settings_theme_color_summary">Color that appears most frequently in the app</string>
     <string name="settings_material_design_3_title">Material Design 3</string>
