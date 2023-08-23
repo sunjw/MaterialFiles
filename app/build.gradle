@@ -28,7 +28,7 @@ android {
     namespace 'me.zhanghai.android.files'
     compileSdk 34
     ndkVersion '25.2.9519653'
-    buildToolsVersion = '33.0.2'
+    buildToolsVersion = '34.0.0'
     defaultConfig {
         applicationId 'me.zhanghai.android.files'
         minSdk 21
@@ -41,6 +41,11 @@ android {
         buildConfigField 'String', 'FILE_PROVIDIER_AUTHORITY', 'APPLICATION_ID + ".file_provider"'
         resValue 'string', 'app_provider_authority', applicationId + '.app_provider'
         resValue 'string', 'file_provider_authority', applicationId + '.file_provider'
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_STL=none"
+            }
+        }
     }
     buildFeatures {
         aidl true
