@@ -5,6 +5,9 @@
 
 package me.zhanghai.android.files.file
 
+import me.zhanghai.android.files.settings.Settings
+import me.zhanghai.android.files.util.valueCompat
+
 val MimeType.isApk: Boolean
     get() = this == MimeType.APK
 
