@@ -102,6 +102,7 @@ class LocaleConfigCompat(context: Context) {
                     context.assets.openXmlResourceParser(cookie, FILE_NAME_ANDROID_MANIFEST)
                 } catch (e: FileNotFoundException) {
                     if (!isAndroidManifestFound) {
+                        ++cookie
                         continue
                     } else {
                         break
