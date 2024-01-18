@@ -28,7 +28,7 @@ android {
     namespace 'me.zhanghai.android.files'
     buildToolsVersion = '34.0.0'
     compileSdk 34
-    ndkVersion '26.0.10792818'
+    ndkVersion '26.1.10909125'
     defaultConfig {
         applicationId 'me.zhanghai.android.files'
         minSdk 21
@@ -130,7 +130,7 @@ dependencies {
     implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
     implementation 'androidx.exifinterface:exifinterface:1.3.7'
     implementation 'androidx.fragment:fragment-ktx:1.6.2'
-    def androidx_lifecycle_version = '2.6.2'
+    def androidx_lifecycle_version = '2.7.0'
     implementation "androidx.lifecycle:lifecycle-common-java8:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-process:$androidx_lifecycle_version"
@@ -139,7 +139,7 @@ dependencies {
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.android.material:material:1.11.0'
 
     implementation 'com.caverock:androidsvg-aar:1.4'
     implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
@@ -149,22 +149,20 @@ dependencies {
     //debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.6.0'
     implementation 'com.h6ah4i.android.materialshadowninepatch:materialshadowninepatch:1.0.0'
     implementation 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:1.0.0'
-    implementation ('com.hierynomus:smbj:0.11.5') {
-        // org.bouncycastle:bcprov-jdk15on uses bytecode version unsupported by Jetifier, so use
-        // org.bouncycastle:bcprov-jdk15to18 instead.
-        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+    implementation ('com.hierynomus:smbj:0.13.0') {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
     }
+    // SSHJ 0.36.0 requires Java 8.
+    //noinspection GradleDependency
     implementation ('com.hierynomus:sshj:0.35.0') {
-        // org.bouncycastle:bcprov-jdk15on uses bytecode version unsupported by Jetifier, so use
-        // org.bouncycastle:bcprov-jdk15to18 instead.
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
     }
     implementation 'com.jakewharton.threetenabp:threetenabp:1.4.6'
     implementation 'com.leinardi.android:speed-dial:3.3.0'
     implementation ('com.rapid7.client:dcerpc:0.12.0') {
-        // org.bouncycastle:bcprov-jdk15on uses bytecode version unsupported by Jetifier, so use
-        // org.bouncycastle:bcprov-jdk15to18 instead.
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+        // This comes from the dependency on SMBJ.
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
     }
     // SMBJ-RPC depends on com.google.guava:guava:18.0, which conflicts with
     // com.google.guava:listenablefuture:1.0 pulled in by AndroidX Core
@@ -180,13 +178,11 @@ dependencies {
     // dev.chrisbanesinsetter:insetter:0.6.0 makes inset unstable when entering immersive.
     implementation 'dev.chrisbanes:insetter-ktx:0.3.1'
     implementation 'dev.rikka.rikkax.preference:simplemenu-preference:1.0.3'
-    implementation 'dev.rikka.shizuku:api:13.1.4'
-    implementation ('eu.agno3.jcifs:jcifs-ng:2.1.9') {
-        // org.bouncycastle:bcprov-jdk15on uses bytecode version unsupported by Jetifier, so use
-        // org.bouncycastle:bcprov-jdk15to18 instead.
-        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+    implementation 'dev.rikka.shizuku:api:13.1.5'
+    implementation ('eu.agno3.jcifs:jcifs-ng:2.1.10') {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
     }
-    implementation 'org.bouncycastle:bcprov-jdk15to18:1.76'
+    implementation 'org.bouncycastle:bcprov-jdk15to18:1.77'
     implementation platform('io.coil-kt:coil-bom:2.5.0')
     implementation 'io.coil-kt:coil'
     implementation 'io.coil-kt:coil-gif'
