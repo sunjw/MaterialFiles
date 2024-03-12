@@ -35,8 +35,8 @@ android {
         // Not supporting notification runtime permission yet.
         //noinspection OldTargetApi
         targetSdk 34
-        versionCode 34
-        versionName '1.6.2'
+        versionCode 35
+        versionName '1.7.0'
         resValue 'string', 'app_version', versionName + ' (' + versionCode + ')'
         buildConfigField 'String', 'FILE_PROVIDIER_AUTHORITY', 'APPLICATION_ID + ".file_provider"'
         resValue 'string', 'app_provider_authority', applicationId + '.app_provider'
@@ -67,6 +67,11 @@ android {
             path 'CMakeLists.txt'
         }
     }
+    lint {
+        // For "Invalid package reference in library; not included in Android: javax.security.sasl.
+        // Referenced from org.apache.mina.proxy.ProxyAuthException."
+        warning 'InvalidPackage', 'MissingTranslation'
+    }
     buildTypes {
         release {
             minifyEnabled true
@@ -91,10 +96,10 @@ android {
             ]
         }
     }
-    lint {
-        // For "Invalid package reference in library; not included in Android: javax.security.sasl.
-        // Referenced from org.apache.mina.proxy.ProxyAuthException."
-        warning 'InvalidPackage', 'MissingTranslation'
+    bundle {
+        language {
+            enableSplit = false
+        }
     }
 }
 
@@ -205,7 +210,7 @@ dependencies {
     implementation 'org.slf4j:slf4j-android:1.7.36'
 
 //#ifdef NONFREE
-    implementation platform('com.google.firebase:firebase-bom:32.7.1')
+    implementation platform('com.google.firebase:firebase-bom:32.7.4')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics-ndk'
 //#endif
