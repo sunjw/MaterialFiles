@@ -99,9 +99,13 @@ android {
             enableSplit = false
         }
     }
-    applicationVariants.all { variant ->
-        variant.outputs.all {
-            outputFileName = "${parent.name}-${variant.name}-${variant.versionName}.apk"
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        variant.outputs.any() { output ->
+            def apkName = "MaterialFiles-${variant.name}-${android.defaultConfig.versionName}.apk"
+            output.outputFileName.set(apkName)
         }
     }
 }
